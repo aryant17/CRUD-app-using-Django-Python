@@ -1,0 +1,35 @@
+{% extends 'app/main.html' %} {% block content %}
+<div class="my-5">
+  <div class="container">
+    <div class="card card-body">
+      <div class="d-flex justify-content-between my-2">
+        <h3>Products</h3>
+        <a href="{% url 'create_product' %}">
+          <button class="btn btn-dark">Add products</button>
+        </a>
+      </div>
+      <table class="table my-3">
+        <thead class="table-secondary">
+          <tr>
+            <td>Name</td>
+            <td>Category</td>
+            <td>Prices</td>
+            <td>Delete</td>
+          </tr>
+        </thead>
+        <tbody>
+          {% for products in products %}
+          <tr class="card-body">
+            <td>{{products.product_name}}</td>
+            <td>{{products.category}}</td>
+            <td>{{products.product_price}}</td>
+            <td><a href="{% url 'delete_product' products.id %}"><button class="btn btn-danger btn-sm">Delete</button></a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

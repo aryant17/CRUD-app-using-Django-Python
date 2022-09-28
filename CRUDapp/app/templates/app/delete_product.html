@@ -1,0 +1,20 @@
+
+{% extends 'app/main.html' %}
+{% block content %}
+
+<body>
+    <div class="container">
+      <div class="card card-body">
+        <h1>Delete this Product ?</h1>
+      </div>
+      <form action="" method="post" class="form-control">
+        {% csrf_token %}
+         <a href="{% url 'home' %}"><button class="btn btn-priamry">Go back</button> </a>  
+        <input type="submit">
+         <button class="btn btn-danger">Yes, Delete!</button>
+    </input>
+      </form>
+    </div>
+</body>
+
+{% endblock %}

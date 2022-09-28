@@ -1,0 +1,17 @@
+{% extends 'app/main.html' %}
+{% block content %}
+
+<body>
+    <div class="container">
+      <div class="card card-body">
+        <h1>Create an Order</h1>
+      </div>
+      <form action="" method="post" class="form-control">
+        {% csrf_token %}
+         {{create_customerForm}}   
+        <input type="submit" value="submit">
+      </form>
+    </div>
+</body>
+
+{% endblock %}

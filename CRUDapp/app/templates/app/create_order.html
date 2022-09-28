@@ -1,0 +1,22 @@
+
+{% extends 'app/main.html' %}
+{% block content %}
+
+<body>
+    <div class="row">
+      <div class="card m-5 card-body col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center">
+        <h1 class="text-center">Create an Order</h1>
+      
+        <form action="" method="post" class=" justify-content-center align-items-center
+        ">
+          {% csrf_token %}
+          {{create_orderForm}}  
+          <button type="submit" class="btn btn-primary">
+            <a href="" class="text-light">Create an Order</a>
+          </button>
+        </form>
+    </div>
+    </div>
+</body>
+
+{% endblock %}
